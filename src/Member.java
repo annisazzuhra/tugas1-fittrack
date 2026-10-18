@@ -17,4 +17,21 @@ public class Member {
     private String tanggalDaftar = "Belum diisi";
     private String jenisPaket = PAKET_BASIC;
 
+    /**
+     * Membuat objek member dengan empat data lengkap.
+     * Setiap data diisi melalui setter agar melewati validasi.
+     *
+     * @param nama nama lengkap member
+     * @param noTelepon nomor telepon member
+     * @param tanggalDaftar tanggal pendaftaran member
+     * @param jenisPaket jenis paket keanggotaan member
+     */
+    public Member(String nama, String noTelepon,
+                  String tanggalDaftar, String jenisPaket) {
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
+
 }

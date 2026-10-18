@@ -34,4 +34,16 @@ public class Member {
         setJenisPaket(jenisPaket);
     }
 
+    /**
+     * Membuat objek member dengan paket Basic secara otomatis.
+     *
+     * @param nama nama lengkap member
+     * @param noTelepon nomor telepon member
+     * @param tanggalDaftar tanggal pendaftaran member
+     */
+    public Member(String nama, String noTelepon,
+                  String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
+    }
+
 }

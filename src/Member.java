@@ -45,5 +45,41 @@ public class Member {
                   String tanggalDaftar) {
         this(nama, noTelepon, tanggalDaftar, PAKET_BASIC);
     }
+    
+    /**
+     * Mengambil nama member yang tersimpan.
+     *
+     * @return nama member
+     */
+    public String getNama() {
+        return nama;
+    }
+
+    /**
+     * Mengambil nomor telepon member yang tersimpan.
+     *
+     * @return nomor telepon member
+     */
+    public String getNoTelepon() {
+        return noTelepon;
+    }
+
+    /**
+     * Mengambil tanggal pendaftaran member yang tersimpan.
+     *
+     * @return tanggal pendaftaran member
+     */
+    public String getTanggalDaftar() {
+        return tanggalDaftar;
+    }
+
+    /**
+     * Mengambil jenis paket keanggotaan member.
+     *
+     * @return jenis paket member
+     */
+    public String getJenisPaket() {
+        return jenisPaket;
+    }
 
 }

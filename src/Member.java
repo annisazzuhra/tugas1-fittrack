@@ -56,6 +56,27 @@ public class Member {
     }
 
     /**
+     * Mengubah nama member setelah melalui validasi.
+     * Jika nama kosong atau hanya berisi spasi, nama lama
+     * dipertahankan dan pesan penolakan dicetak.
+     *
+     * @param nama nama baru member yang tidak boleh kosong
+     *             atau hanya berisi spasi
+     */
+    public void setNama(String nama) {
+        if (nama == null || nama.trim().isEmpty()) {
+            cetakPenolakan(
+                    "Nama",
+                    "Nama tidak boleh kosong atau hanya berisi spasi",
+                    this.nama
+            );
+            return;
+        }
+
+        this.nama = nama.trim();
+    }
+
+    /**
      * Mengambil nomor telepon member yang tersimpan.
      *
      * @return nomor telepon member

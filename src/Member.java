@@ -86,6 +86,32 @@ public class Member {
     }
 
     /**
+     * Mengubah nomor telepon member setelah melalui validasi format.
+     * Jika format tidak valid, nomor lama dipertahankan dan pesan
+     * penolakan dicetak.
+     *
+     * @param noTelepon nomor telepon baru, wajib diawali angka 0
+     *        dan memiliki panjang minimal 10 digit
+     */
+    public void setNoTelepon(String noTelepon) {
+        if (noTelepon == null
+                || !noTelepon.startsWith(AWALAN_TELEPON)
+                || noTelepon.length() < MIN_PANJANG_TELEPON
+                || !noTelepon.matches("[0-9]+")) {
+
+            cetakPenolakan(
+                    "Nomor telepon",
+                    "Nomor telepon harus diawali angka 0 "
+                            + "dan minimal 10 digit angka",
+                    this.noTelepon
+            );
+            return;
+        }
+
+        this.noTelepon = noTelepon;
+    }
+
+    /**
      * Mengambil tanggal pendaftaran member yang tersimpan.
      *
      * @return tanggal pendaftaran member

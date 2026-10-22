@@ -121,6 +121,29 @@ public class Member {
     }
 
     /**
+     * Mengubah tanggal pendaftaran setelah melalui validasi.
+     * Jika tanggal kosong, tanggal lama dipertahankan dan pesan
+     * penolakan dicetak.
+     *
+     * @param tanggalDaftar tanggal pendaftaran baru yang tidak
+     *        boleh kosong atau hanya berisi spasi
+     */
+    public void setTanggalDaftar(String tanggalDaftar) {
+        if (tanggalDaftar == null
+                || tanggalDaftar.trim().isEmpty()) {
+
+            cetakPenolakan(
+                    "Tanggal daftar",
+                    "Tanggal daftar tidak boleh kosong",
+                    this.tanggalDaftar
+            );
+            return;
+        }
+
+        this.tanggalDaftar = tanggalDaftar.trim();
+    }
+
+    /**
      * Mengambil jenis paket keanggotaan member.
      *
      * @return jenis paket member

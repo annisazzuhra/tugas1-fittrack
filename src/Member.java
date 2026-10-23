@@ -152,4 +152,27 @@ public class Member {
         return jenisPaket;
     }
 
+    /**
+     * Mengubah jenis paket setelah memeriksa pilihan yang tersedia.
+     * Jika paket tidak sesuai, paket lama dipertahankan dan pesan
+     * penolakan dicetak.
+     *
+     * @param jenisPaket jenis paket Basic, Premium, atau VIP
+     */
+    public void setJenisPaket(String jenisPaket) {
+        if (PAKET_BASIC.equals(jenisPaket)
+                || PAKET_PREMIUM.equals(jenisPaket)
+                || PAKET_VIP.equals(jenisPaket)) {
+
+            this.jenisPaket = jenisPaket;
+            return;
+        }
+
+        cetakPenolakan(
+                "Jenis paket",
+                "Jenis paket hanya boleh Basic, Premium, atau VIP",
+                this.jenisPaket
+        );
+    }
+
 }

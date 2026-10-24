@@ -175,4 +175,18 @@ public class Member {
         );
     }
 
+    /**
+     * Mengubah data member menjadi teks dengan label setiap atribut.
+     *
+     * @return teks berisi nama, nomor telepon, tanggal daftar,
+     *         dan jenis paket member
+     */
+    @Override
+    public String toString() {
+        return "Member{nama='" + nama
+                + "', noTelepon='" + noTelepon
+                + "', tanggalDaftar='" + tanggalDaftar
+                + "', jenisPaket='" + jenisPaket + "'}";
+    }
+
 }

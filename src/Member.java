@@ -189,4 +189,22 @@ public class Member {
                 + "', jenisPaket='" + jenisPaket + "'}";
     }
 
+    /**
+     * Mencetak alasan penolakan data dan nilai lama yang dipertahankan.
+     *
+     * @param atribut nama atribut yang datanya ditolak
+     * @param alasan alasan data tidak dapat disimpan
+     * @param nilaiDipertahankan nilai lama yang tetap digunakan
+     */
+    private void cetakPenolakan(
+            String atribut,
+            String alasan,
+            String nilaiDipertahankan) {
+
+        System.out.println(
+                "[DITOLAK] " + atribut + ": " + alasan
+                        + ". Nilai dipertahankan: "
+                        + nilaiDipertahankan
+        );
+    }
 }

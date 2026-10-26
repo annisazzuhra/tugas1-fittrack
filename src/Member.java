@@ -8,13 +8,18 @@ public class Member {
     private static final String AWALAN_TELEPON = "0";
     private static final int MIN_PANJANG_TELEPON = 10;
 
+    /** Jenis paket keanggotaan yang diizinkan. */
     public static final String PAKET_BASIC = "Basic";
     public static final String PAKET_PREMIUM = "Premium";
     public static final String PAKET_VIP = "VIP";
 
-    private String nama = "Tanpa Nama";
-    private String noTelepon = "Belum diisi";
-    private String tanggalDaftar = "Belum diisi";
+    private static final String NAMA_DEFAULT = "Tanpa Nama";
+    private static final String NO_TELEPON_DEFAULT = "Belum diisi";
+    private static final String TANGGAL_DEFAULT = "Belum diisi";
+
+    private String nama = NAMA_DEFAULT;
+    private String noTelepon = NO_TELEPON_DEFAULT;
+    private String tanggalDaftar = TANGGAL_DEFAULT;
     private String jenisPaket = PAKET_BASIC;
 
     /**

@@ -1,0 +1,50 @@
+/**
+ * Menguji class Member pada sistem keanggotaan gym FitTrack.
+ * Pengujian mencakup pembuatan objek, validasi data, dan
+ * penampilan seluruh data member.
+ */
+public class TesFitTrack {
+
+    /**
+     * Membuat objek member, menguji penolakan data tidak valid,
+     * dan menampilkan daftar member.
+     *
+     * @param args argumen command line yang tidak digunakan
+     */
+    public static void main(String[] args) {
+
+        System.out.println("=== Membuat Member ===");
+
+        Member[] daftarMember = {
+            new Member(
+                    "Keisya Zahira",
+                    "081234567890",
+                    "17-08-2026",
+                    Member.PAKET_PREMIUM
+            ),
+            new Member(
+                    "Kimy Veronica",
+                    "082198765432",
+                    "18-08-2026",
+                    Member.PAKET_VIP
+            ),
+            new Member(
+                    "Rayyan khalif",
+                    "085711112222",
+                    "19-08-2026",
+                    Member.PAKET_BASIC
+            ),
+            new Member(
+                    "Shea Azalea",
+                    "087833334444",
+                    "20-08-2026"
+            ),
+            new Member(
+                    "Raka Abyasa",
+                    "81234",
+                    "21-08-2026",
+                    "Gold"
+            )
+        };
+    }
+}

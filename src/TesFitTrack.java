@@ -46,5 +46,20 @@ public class TesFitTrack {
                     "Gold"
             )
         };
+
+        System.out.println();
+        System.out.println("=== Uji Setter dengan Data Tidak Valid ===");
+
+        Member uji = daftarMember[0];
+
+        System.out.println(
+                "Nomor telepon sebelum: " + uji.getNoTelepon()
+        );
+
+        uji.setNoTelepon("12345");
+
+        System.out.println(
+                "Nomor telepon sesudah: " + uji.getNoTelepon()
+        );
     }
 }

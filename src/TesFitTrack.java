@@ -61,5 +61,14 @@ public class TesFitTrack {
         System.out.println(
                 "Nomor telepon sesudah: " + uji.getNoTelepon()
         );
+        
+        System.out.println();
+        System.out.println("=== Uji Nama Tidak Valid ===");
+
+        uji.setNama("   ");
+
+        System.out.println(
+                "Nama setelah pengujian: " + uji.getNama()
+        );
     }
 }

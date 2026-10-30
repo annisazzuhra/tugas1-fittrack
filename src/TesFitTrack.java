@@ -70,5 +70,14 @@ public class TesFitTrack {
         System.out.println(
                 "Nama setelah pengujian: " + uji.getNama()
         );
+
+        System.out.println();
+        System.out.println("=== Daftar Seluruh Member ===");
+
+        for (int i = 0; i < daftarMember.length; i++) {
+            System.out.println(
+                    (i + 1) + ". " + daftarMember[i].toString()
+            );
+        }
     }
 }

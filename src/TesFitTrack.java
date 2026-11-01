@@ -72,6 +72,19 @@ public class TesFitTrack {
         );
 
         System.out.println();
+        System.out.println("=== Uji Jenis Paket Tidak Valid ===");
+
+        System.out.println(
+                "Jenis paket sebelum: " + uji.getJenisPaket()
+        );
+
+        uji.setJenisPaket("Gold");
+
+        System.out.println(
+                "Jenis paket sesudah: " + uji.getJenisPaket()
+        );
+
+        System.out.println();
         System.out.println("=== Daftar Seluruh Member ===");
 
         for (int i = 0; i < daftarMember.length; i++) {

@@ -85,6 +85,19 @@ public class TesFitTrack {
         );
 
         System.out.println();
+        System.out.println("=== Uji Tanggal Daftar Tidak Valid ===");
+
+        System.out.println(
+                "Tanggal daftar sebelum: " + uji.getTanggalDaftar()
+        );
+
+        uji.setTanggalDaftar("   ");
+
+        System.out.println(
+                "Tanggal daftar sesudah: " + uji.getTanggalDaftar()
+        );
+
+        System.out.println();
         System.out.println("=== Daftar Seluruh Member ===");
 
         for (int i = 0; i < daftarMember.length; i++) {
